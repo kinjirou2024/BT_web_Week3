@@ -1,0 +1,242 @@
+body {
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    white-space: wrap;
+}
+
+.inline {
+    display: inline;
+}
+
+:root {
+    /* COLORS */
+    --HEADER-RED: rgb(241, 92, 92);
+    --FONT-COLOR: whitesmoke;
+    --BODY-GRAY: rgb(70, 70, 71);
+    --HEADER-HOVER-BLUE: rgb(98, 98, 236);
+    --PROJECT-PBGCOLOR: rgb(52, 53, 58);
+    --POPPING-RED: brown;
+
+}
+
+.navbar-container {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: var(--HEADER-RED);
+    width: 100%;
+    height: 82px;
+    border-bottom: 1px solid black;
+}
+
+.navbar-container ul {
+    display: flex;
+    justify-content: flex-end;
+    height: 80px;
+    flex-direction: row;
+}
+
+.navbar-container li {
+    display: inline;
+    padding: 1em 1em;
+    height: 82px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--FONT-COLOR);
+}
+
+.navbar-container li:hover {
+    background-color: var(--HEADER-HOVER-BLUE);
+}
+
+.navbar-container li:focus {
+    background-color: var(--HEADER-HOVER-BLUE);
+}
+
+.footer {
+    height: auto;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+.footer p {
+    color: var(--FONT-COLOR);
+    padding: 1rem;
+}
+
+.footer-link {
+    color: var(--FONT-COLOR);
+    text-decoration: none;
+}
+
+
+.section-welcome {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--BODY-GRAY);
+}
+
+.welcome {
+    font-size: 2em;
+    color: white;
+}
+
+.padding-element {
+    padding: 30px;
+}
+
+.job {
+    font-size: 1em;
+    color: red;
+}
+
+.section-projects {
+    height: auto;
+    background-color: var(--HEADER-HOVER-BLUE);
+}
+
+.detail-project {
+    color: var(--FONT-COLOR);
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2em;
+    margin-bottom: 10rem;
+    position: relative;
+    top: 50px;
+    padding-top: 40px;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.projects-images {
+    width: 100%;
+    height: 400px;
+}
+
+.project-tile {
+    width: 25%;
+    min-width: 300px;
+    text-decoration: none;
+}
+
+.title {
+    background-color: var(--PROJECT-PBGCOLOR);
+    color: white;
+    text-align: center;
+    padding: 1rem 0.5rem;
+}
+
+.title:hover {
+    color: orange;
+}
+
+.title:hover::after {
+    content: '/>';
+    color: orange;
+    box-sizing: inherit;
+}
+
+.title:hover::before {
+    content: '<';
+    color: orange;
+    box-sizing: inherit;
+}
+
+.detail-btn {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.process {
+    padding: 1rem 1rem;
+    background-color: var(--PROJECT-PBGCOLOR);
+    color: var(--FONT-COLOR);
+    font: inherit;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+.process:hover {
+    background: #B22222;
+    transition: background 0.5s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+    min-width: 30%;
+}
+
+.section-contact {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--PROJECT-PBGCOLOR);
+    gap: 2rem;
+}
+
+.contact-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--FONT-COLOR);
+}
+
+.contact-h2 {
+    font-size: 3.5rem;
+    align-items: center;
+}
+
+.contact-p {
+    font-style: italic;
+    font-weight: 100;
+    align-items: center;
+    font-family: inherit;
+}
+
+.contact-links a {
+    color: var(--FONT-COLOR);
+    padding: 2rem;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    transform: translateY(-2rem);
+}
+
+/* DARK MODE */
+@media(prefers-color-scheme: dark) {
+    :root {
+        --HEADER-RED: rgb(233, 116, 116);
+        --FONT-COLOR: whitesmoke;
+        --BODY-GRAY: rgb(70, 70, 71);
+        --HEADER-HOVER-BLUE: rgb(30, 30, 44);
+        --PROJECT-PBGCOLOR: rgb(52, 53, 58);
+        --POPPING-RED: rgb(216, 224, 96);
+    }
+}
